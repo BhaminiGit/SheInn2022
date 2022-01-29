@@ -1,43 +1,103 @@
 <!doctype html>
 <html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
   html{
-    background-color: rgb(178, 249, 209);
-    
+    font-family: Arial, Helvetica, sans-serif;
+    background:url(/static/backgroundhome.jpg) no-repeat ;
+    background-size: cover;       
   }
 
+  body{
+    text-align: center;
+  }
+
+  
   div.middle{
-    background-color: rgb(252, 197, 241);
-    padding: 20px;
-    width: fit-content;
-  height: fit-content;
-  }
-  ul.MainMenuList{
-    
-    padding: 20px;
-    width: fit-content;
-    height: fit-content;
-  }
-  li.MainMenuList{
-    display: inline;
+		padding: 20px;
+		background-color: rgba(252, 252, 252, 0.537);
+	  }
+
+/*Add a black background color to the top navigation */
+.topnav {
+  background-color: #246d1e;
+  overflow: hidden;
+    height: 100px;
+
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left; 
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
     padding: 14px 16px;
-    background-color: green;
-    color: lightyellow;
-  }
-     
-  li.MainMenuList:hover{
-    background-color: lightgoldenrodyellow;
-    color: green;
-   
-  }
-  a.MainMenuList:visited {
-    color: green;
-  }
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 17px;
+    height: 70px;
+    line-height: 70px;
+}
+
+
+
+footer > p {
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    background-color: #367f0b;
+    color: #fff;
+    margin-top: 1100px;
+}
+
+#hamburger-button {
+    background: blue;
+    color: white;
+    float: right;
+    border-style: none;
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    top: 1.875%;
+    right: 3.5%;
+}
+#hamburger-button div {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+ color: black;
+}
+
+/* Add an active class to highlight the current page*/
+.topnav a.active {
+	background-color: gray;
+	color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+} 
+
+
 
 </style>
 
-<title>{% block title %}Welcome{% endblock %} | Spruce Up</title>
+<title>{% block title %} Welcome{% endblock %} | Spruce Up</title>
 
 {% block style %} {% endblock %}
 
@@ -46,21 +106,41 @@
 <body>
 
   
-    <ul class="MainMenuList">
-        <li class="MainMenuList">  Home</li>
-        <li class="MainMenuList"><a href="{{ url_for('show_neighScore') }}">Neighborhood Scoreboard</a></li>
-        <li class="MainMenuList">Individual Scoreboard</li>
-        <li class="MainMenuList"><a href="{{ url_for('show_individualClean') }}">Individual Cleaning</a></li>
-        <li class="MainMenuList"><a href="{{ url_for('show_cleaningEvents') }}">Cleaning Events</a></li>
-        <li class="MainMenuList"><a href="{{ url_for('show_cleaningEvents') }}">About Us</a></li>
-        <li class="MainMenuList"><a href="{{ url_for('show_prizes') }}">Prizes Us</a></li>
-    
-    </ul> 
-    
-    
+
+    <div class="topnav" id="myTopnav">
+        <a href="{{ url_for('show_home') }}"  >HOME</a>
+        <a href="{{ url_for('show_neighScore') }}">NEIGHBORHOOD SCORE BOARD</a>
+       <a href="{{ url_for('show_neighScore') }}">INDIVIDUAL SCORE BOARD</a>
+        <a href="{{ url_for('show_individualClean') }}">INDIVIDUAL CLEANING</a>
+        <a href="{{ url_for('show_cleaningEvents') }}">EVENTS</a>
+       <a href="{{ url_for('show_prizes') }}">PRIZES</a>
+      <a href="{{ url_for('show_about') }}">ABOUT US</a>
+      <a href="{{ url_for('show_about') }}">CONTACT</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+
+  </div>
+    <button id="hamburger-button">
+      <div></div>
+      <div></div>
+      <div></div>
+  </button>
+
     <div class="middle">
       {% block body %}{% endblock %}
     </div>
-</body>
+
+    <script>
+
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+  </body>
 
 </html>

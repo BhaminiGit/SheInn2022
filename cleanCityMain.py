@@ -13,6 +13,11 @@ neighList = {
 def show_neighScore():
     return render_template("neighScore.html", topNeighList = neighList)
 
+@app.route("/home")
+def show_home():
+    return render_template("home.html")
+
+
 @app.route("/individualCleaning")
 def show_individualClean():
     return render_template("indivClean.html")
@@ -21,10 +26,12 @@ def show_individualClean():
 def show_cleaningEvents():
     return render_template("cleaningEvent.html")
 
-# @app.route("/about")
-# def show_about():
-#     return render_template("")
+@app.route("/about")
+def show_about():
+      return render_template("about.html")
 
 @app.route("/prizes")
 def show_prizes():
-    return render_template("prizes.html")
+    return render_template("prize.html")
+
+app.run()
