@@ -4,18 +4,44 @@
 
 {% block title %}Home{% endblock %}
 
-{% block style %} {% endblock %}
+{% block style %} 
+<style>
+ul.topNeighClass{
+  background-color: #93dfff;
+  padding: 10px;
+}
+
+li.topNeighClass{
+  background: #fffb93;
+  margin: 5px;
+}
+
+div.topNeighClass{
+  width: fit-content;
+  height: fit-content;
+
+}
+
+</style>
+{% endblock %}
+
+<h1>Cleanest Neighborhoods</h1>
 
 {% block body %}
 
-  <h1>Cleanest Neighborhoods January</h1>
+  
+  
+  <br>
 
-  list of top neighborhoods  
-  <ui class = "topNeighbClass">
-    {% for n in topNeighList %}
-      <li> {{ n }} </li>
-    {% endfor %}
-  </ui>
+  <div class = "topNeighClass">
+    <h2>Cleanest Neighborhoods - January</h2>
+    <ul class = "topNeighClass">
+      {% for n in topNeighList %}
+        <li class = "topNeighClass"> {{ n }} </li>
+      {% endfor %}
+    </ul>
+  </div>
+<br>
 
   MAP
 
