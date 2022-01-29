@@ -1,12 +1,43 @@
 <!doctype html>
+<html>
 
-<title>{% block title %}Welcome{% endblock %} | Event Blog</title>
+  <style>
+    li.MainMenuList{
+    
+    padding: 14px 16px;
+    background-color: green;
+    color: lightyellow;
+  }
+  
+  li.MainMenuList:hover{
+    background-color: lightgoldenrodyellow;
+    color: green;
+   
+  }
+  a.MainMenuList:visited {
+    color: green;
+
+  }
+</style>
+
+<title>{% block title %}Welcome{% endblock %} | Spruce Up</title>
+
+{% block style %} {% endblock %}
 
 
-  <div class="body">
-  {% block body %}{% endblock %}
+<body>
+    <ui class="MainMenuList">
+      <li class="MainMenuList">  HOME</li>
+      <li class="MainMenuList"><a href="{{ url_for('show_neighScore') }}">Neighborhood Scoreboard</a></li>
+      <li class="MainMenuList">Individual Scoreboard</li>
+      <li class="MainMenuList"><a href="{{ url_for('show_individualClean') }}">Individual Cleaning</a></li>
+      <li class="MainMenuList"><a href="{{ url_for('show_cleaningEvents') }}">Cleaning Events</a></li>
+      <li class="MainMenuList">About</li>
+  
+    </ui> 
+    {% block body %}{% endblock %}
   </div>
-  <div class="footer">
-    Event Blog &mdash; A Flask Application
-  </div>
-</div>
+
+</body>
+
+</html>

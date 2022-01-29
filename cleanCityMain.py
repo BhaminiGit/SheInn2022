@@ -8,7 +8,14 @@ neighList = {
     "neighborhood3"
 }
 
-@app.route("/")
-def show_home_neighScore():
+@app.route("/neighborhoodScore")
+def show_neighScore():
     return render_template("neighScore.html", topNeighList = neighList)
 
+@app.route("/individualCleaning")
+def show_individualClean():
+    return render_template("indivClean.html")
+
+@app.route("/cleaningEvent")
+def show_cleaningEvents():
+    return render_template("cleaningEvent.html")

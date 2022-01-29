@@ -1,54 +1,22 @@
-<!DOCTYPE html>
-
-<style>
-    .MainMenuList{
-    
-    padding: 14px 16px;
-    background-color: green;
-    color: lightyellow;
-  }
-  
-  .MainMenuList:hover{
-    background-color: lightgoldenrodyellow;
-    color: green;
-   
-  }
-</style>
-
-<html>
-
-<head>
-  <title> CITY CLEAN</title>
-</head>
-
-<body>
-<ui >
-  <li class="MainMenuList">HOME</li>
-  <li class="MainMenuList">Neighborhood Scoreboard</li>
-  <li class="MainMenuList">Individual Scoreboard</li>
-  <li class="MainMenuList">Individual Cleaning</li>
-  <li class="MainMenuList">Cleaning Events</li>
-  <li class="MainMenuList">Cleaning Events</li>
-
-</ui>
-
-<h1>Cleanest Neighborhoods January</h1>
-
-list of top neighborhoods  
-<ui class = "topNeighbClass">
-  {% for n in topNeighList %}
-    <li> {{ n }} </li>
-  {% endfor %}
-</ui>
 
 
+{% extends "layout.html" %} 
 
+{% block title %}Home{% endblock %}
 
-<ui>
-  
-  
-</ui>
+{% block style %} {% endblock %}
 
-</body>
+{% block body %}
 
-</html>
+  <h1>Cleanest Neighborhoods January</h1>
+
+  list of top neighborhoods  
+  <ui class = "topNeighbClass">
+    {% for n in topNeighList %}
+      <li> {{ n }} </li>
+    {% endfor %}
+  </ui>
+
+  MAP
+
+{% endblock %}
