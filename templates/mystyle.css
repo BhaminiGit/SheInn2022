@@ -1,0 +1,318 @@
+s@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    padding: 0%;
+    background-size: auto;
+    overflow: auto;
+}
+.header img {
+
+  float: left;
+  width: 200px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+body > main > h1 {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    margin: 30px;
+    font-family: Georgia;
+}
+
+body > main > h4 {
+     color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 10px;
+    font-family: Georgia;
+}
+.column {
+	float: left;
+	width: 40%;
+	padding: 72px;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+.box1 {
+    width: 300px;
+    border: 15px solid #235668;
+    background-color: white;
+    padding: 80px;
+    margin: 20px 100px;
+    float: left;
+    height: 300px;
+}
+
+.box2 {
+    width: 300px;
+    border: 15px solid #235668;
+    background-color: white;
+    padding: 80px;
+    margin: 20px 100px;
+    float: right;
+    height: 600px;
+}
+
+.box3 {
+    width: 700px;
+    border: 5px solid black;
+    background-color: white;
+    padding: 80px;
+    margin: 60px 250px;
+    align-content: center;
+    height: 200px;
+}
+
+main {
+    height: 0px;
+}
+
+footer{ 
+    height: 0px;
+}
+
+.box1 > p {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Georgia;  
+}
+.box2 > p {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Georgia;
+}
+
+.box2 > p1 {
+    font-size: 18px;
+    font-family: Georgia;
+    text-align: center;
+}
+
+.box2 > img {
+    text-align: center;
+}
+
+.box3 > p {
+    font-weight: bold;
+    float: left;
+    font-family: Georgia;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.box3 > p1 {
+    float: left;
+    font-family: Georgia;
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+/*Add a black background color to the top navigation */
+.topnav {
+  background-color: #272c33;
+  overflow: hidden;
+    height: 100px;
+}
+
+.midnav {
+  background-color: 272c33;
+  overflow: hidden;
+margin-top: 400px;
+
+    height: 200px;
+    width: 250px;
+    float: right;
+     
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 17px;
+    height: 70px;
+    line-height: 70px;
+}
+
+.midnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 17px;
+    height: 100px;
+    line-height: 100px;
+
+    
+}
+
+footer > p {
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    background-color: #272c33;
+    color: #fff;
+    margin-top: 1100px;
+}
+
+#hamburger-button {
+    background: blue;
+    color: white;
+    float: right;
+    border-style: none;
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    top: 1.875%;
+    right: 3.5%;
+}
+#hamburger-button div {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+h1 {
+  text-align: center;
+}
+.social-menu ul {
+    position: absolute;
+    top: 70%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 50px;
+    line-height: 60px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: dodgerblue;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center; 
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+ color: black;
+}
+
+.midnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page*/
+.topnav a.active {
+	background-color: gray;
+	color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+} 
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+	  display: none;
+   }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+	  position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 959px) {
+    #hamburger-button {
+        display: block;
+    }
+    #top-menu {
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    main, aside {
+        float: none;
+        width: 96.25%;
+    }
+}
+@media only screen and (max-width: 497px) {
+    body {
+        width: 100%;
+    }
+    header > img, #title-subtitle {
+        float: none;
+    }
+    header > img {
+        width: 90px;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+
+
+
+
