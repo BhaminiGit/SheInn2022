@@ -16,10 +16,9 @@ SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
 
 neighList = {
-    "neighborhood1" : "Pittsburgh",
-    "neighborhood2" : "Philidelphia",
-    "neighborhood3" : "Harrisburg",
-    "neighborhood4" : "Erie"
+    "Hill District" : "Pittsburgh",
+    "Homewood" : "Pittsburgh",
+    "South Oakland" : "Pittsburgh"
 }
 
 personList = {
