@@ -1,0 +1,53 @@
+
+
+{% extends "layout.html" %} 
+
+{% block title %}Home{% endblock %}
+
+{% block style %} 
+<style>
+ul.topPersonClass{
+  background-color: #c993ff;
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+li.topPersonClass{
+  background: #fffb93;
+  margin: 5px;
+}
+
+div.topPersonClass{
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+
+}
+
+
+
+
+</style>
+{% endblock %}
+
+<h1>Top Contributers</h1>
+
+{% block body %}
+
+  
+  
+  <br>
+
+  <div class = "topPersonClass">
+    <h2>Top Contributers - January</h2>
+    <ul class = "topPersonClass">
+      {% for n in topContr %}
+        <li class = "topPersonClass"> {{ n }} - {{ topContr[n] }} points </li>
+      {% endfor %}
+    </ul>
+  </div>
+<br>
+
+
+{% endblock %}
