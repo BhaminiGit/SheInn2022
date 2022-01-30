@@ -30,6 +30,10 @@ def show_cleaningEvents():
 def show_about():
       return render_template("about.html")
 
+@app.route("/contact")
+def show_contact():
+      return render_template("contact.html")
+
 @app.route("/prizes")
 def show_prizes():
     return render_template("prize.html")

@@ -1,0 +1,41 @@
+{% extends "layout.html" %} 
+
+{% block title %}About{% endblock %}
+
+{% block style %} 
+
+
+{% endblock %}
+
+{% block body %}
+<body>
+
+	<main>
+      
+        <div class = "box3">
+            <p>Have something to say to us?</p>
+            <p1>Feel free to reach out! <br><br>Fill in the form below and we will get in touch within 24 hours<br><br></p1>
+            
+            <form action = "mailto:arr122@pitt.edu?subject=CS0134 Restaurant Cahaya"
+              method = "post" enctype="text/plain">
+                
+            <label for="from">Email address:</label><br><br>       
+            <input type="email" id = "from" name="from" maxlength="32"><br><br> 
+            
+            <label for="message">Your Message to Us</label><br><br>    
+            <textarea id="message" name="message"></textarea><br><br>
+                
+            <button type="submit">Send</button>    
+                 
+            </form> 
+            <br><br>
+            <img src="/static/thankyou.png" alt="logo" style="margin:0px -40px"> 
+
+        </div>
+            
+
+     </main>
+        
+</body>
+
+{% endblock %}

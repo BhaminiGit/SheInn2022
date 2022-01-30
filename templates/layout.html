@@ -94,10 +94,52 @@ h1 {
 } 
 
 
+.box1 {
+    width: 700px;
+    border: 5px solid #246d1e;
+    background-color: #D0D5AA;
+    padding: 80px;
+    margin: 40px 250px;
+    align-content: center;
+    height: 250px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box2 {
+    width: 700px;
+    border: 5px solid #246d1e;
+    background-color: #D0D5AA;
+    padding: 80px;
+    margin: 40px 250px;
+    align-content: center;
+    height: 400px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.box3 {
+  
+    width: 700px;
+    border: 5px solid #246d1e;
+    background-color: white;
+    padding: 80px;
+    margin: 40px 250px;
+    align-content: center;
+    height: 700px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+
+
 
 </style>
 
-<title>{% block title %} Welcome{% endblock %} | Spruce Up</title>
+<title>{% block title %} Welcome{% endblock %} | Clean City</title>
 
 {% block style %} {% endblock %}
 
@@ -115,7 +157,7 @@ h1 {
         <a href="{{ url_for('show_cleaningEvents') }}">EVENTS</a>
        <a href="{{ url_for('show_prizes') }}">PRIZES</a>
       <a href="{{ url_for('show_about') }}">ABOUT US</a>
-      <a href="{{ url_for('show_about') }}">CONTACT</a>
+      <a href="{{ url_for('show_contact') }}">CONTACT</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
 
   </div>
