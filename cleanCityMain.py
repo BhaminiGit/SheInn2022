@@ -3,9 +3,17 @@ from flask import Flask, url_for, render_template, redirect
 app = Flask(__name__)
 
 neighList = {
-    "neighborhood1",
-    "neighborhood2",
-    "neighborhood3"
+    "neighborhood1" : "Pittsburgh",
+    "neighborhood2" : "Philidelphia",
+    "neighborhood3" : "Harrisburg",
+    "neighborhood4" : "Erie"
+}
+
+personList = {
+    "John" : 500,
+    "Alice" : 450,
+    "Emily" : 440,
+    "Mike" : 400
 }
 
 #git push --set-upstream origin main
@@ -16,7 +24,6 @@ def show_neighScore():
 @app.route("/home")
 def show_home():
     return render_template("home.html")
-
 
 @app.route("/individualCleaning")
 def show_individualClean():
@@ -37,5 +44,9 @@ def show_contact():
 @app.route("/prizes")
 def show_prizes():
     return render_template("prize.html")
+
+@app.route("/indivScore")
+def show_indivScore():
+    return render_template("indivScore.html", topContr = personList)
 
 app.run()

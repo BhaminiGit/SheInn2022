@@ -7,7 +7,7 @@
 {% block style %} 
 <style>
 ul.topNeighClass{
-  background-color: #93dfff;
+  background-color: #c993ff;
   padding: 10px;
   text-align: center;
   list-style: none;
@@ -43,12 +43,12 @@ div.topNeighClass{
     <h2>Cleanest Neighborhoods - January</h2>
     <ul class = "topNeighClass">
       {% for n in topNeighList %}
-        <li class = "topNeighClass"> {{ n }} </li>
+        <li class = "topNeighClass"> {{ n }} - {{topNeighList[n] }} </li>
       {% endfor %}
     </ul>
   </div>
 <br>
 
-  MAP
+  
 
 {% endblock %}
